@@ -15,9 +15,10 @@ struct BookPreview: View {
         ZStack {
             Rectangle()
                 .foregroundColor(.white)
+                .cornerRadius(10)
                 .shadow(color: .gray, radius: 5, x: -5, y: 5)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 10) {
                 HStack {
                     Text(book.title)
                         .font(.title)
@@ -41,6 +42,7 @@ struct BookPreview: View {
             }
             .padding()
         }
+        .accentColor(.black)
     }
 }
 
