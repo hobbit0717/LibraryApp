@@ -33,7 +33,10 @@ struct BookContentView: View {
             model.updatePage(forId: book.id, page: page)
         })
         .onAppear {
-            page = book.currentPage
+            //page = book.currentPage
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                page = book.currentPage
+            }
         }
         
     }

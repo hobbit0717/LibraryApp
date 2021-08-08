@@ -61,5 +61,4 @@ class BookModel : ObservableObject {
             books[index].currentPage = page
         }
     }
-    
 }
